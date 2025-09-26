@@ -1,73 +1,56 @@
-# React + TypeScript + Vite
+# 🛍️ TestifyStore - E-Ticaret Uygulaması
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+TestifyStore, modern teknolojiler kullanılarak geliştirilmiş bir **React tabanlı e-ticaret uygulamasıdır**.  
+Hızlı, ölçeklenebilir ve kullanıcı dostu bir alışveriş deneyimi sunmayı hedefler.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Özellikler
 
-## React Compiler
+- 🔍 **Ürün Listeleme ve Filtreleme**  
+- 🛒 **Sepet Yönetimi (Ekle, Çıkar, Güncelle)**  
+- 🔔 **Kullanıcı Bildirimleri (Toastify)**  
+- 📡 **JSON Server ile Mock API**  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Kullanılan Teknolojiler
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Teknoloji | Açıklama |
+|-----------|----------|
+| **React** | Modern, component tabanlı kullanıcı arayüzü geliştirme kütüphanesi |
+| **TypeScript** | JavaScript’in tip güvenli ve ölçeklenebilir versiyonu |
+| **Vite** | Hızlı geliştirme ve derleme sağlayan modern frontend build aracı |
+| **Tailwind CSS** | Utility-first yaklaşımıyla hızlı ve esnek stil oluşturma sağlayan CSS framework’ü |
+| **MUI (Material UI)** | Hazır ve özelleştirilebilir React bileşenleri sunan UI kütüphanesi |
+| **Shadcn UI** | Modern ve erişilebilir React UI bileşenleri |
+| **Redux Toolkit** | Global state yönetimi için kullanılan sadeleştirilmiş Redux kütüphanesi |
+| **React Router** | SPA (Single Page Application) için sayfa yönlendirme ve route yönetimi |
+| **Axios** | API ve backend ile HTTP istekleri yapmak için |
+| **JSON Server** | Mock API ve test verisi için |
+| **React Toastify** | Kullanıcıya bildirim ve uyarı mesajları göstermek için |
+| **GSAP** | Animasyon ve geçiş efektleri için güçlü JS kütüphanesi |
+| **PostCSS** | CSS’i derleme ve dönüştürme işlemleri için |
+| **Jest / Testing Library (opsiyonel)** | Birim ve entegrasyon testleri için |
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📂 Proje Kurulumu
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Projeyi kendi bilgisayarında çalıştırmak için:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+```bash
+# Reponun kopyasını al
+git clone https://github.com/alperhanbarut/TestifyStore-Ecommerce-website.git
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# Proje klasörüne gir
+cd TestifyStore-Ecommerce-website
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# Gerekli paketleri yükle
+npm install
+
+# JSON Server (fake API) çalıştır
+npx json-server --watch db.json --port 5000
+
+# Geliştirme sunucusunu başlat
+npm run dev
