@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useFormik } from "formik";
 import { useNavigate, Link } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -15,7 +14,6 @@ import MailOutlineIcon from "@mui/icons-material/MailOutline";
 
 import { RegisterPageSchema } from "../schemas/RegisterPageSchema";
 import RegisterPageService from "../services/RegisterPageService";
-import type { UserType } from "../types/Types";
 
 function RegisterPage() {
   const navigate = useNavigate();
