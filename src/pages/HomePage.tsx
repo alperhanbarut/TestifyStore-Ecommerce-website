@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import type { ProductType, UserType } from "../types/Types";
 import { setCurrentUser, setLoading, setProducts } from "../redux/AppSlice";
@@ -6,14 +6,12 @@ import ProductService from "../services/ProductService";
 import { toast } from "react-toastify";
 import { type RootState } from "../redux/store";
 import Product from "../components/ProductCard";
-import { useTheme, useMediaQuery } from "@mui/material";
+
 import Slider from "../components/Slider";
 
 function HomePage() {
   const dispatch = useDispatch();
   const { products } = useSelector((state: RootState) => state.app);
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   const getAllProducts = async () => {
     try {

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useFormik } from "formik";
 import { useNavigate, Link } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -20,9 +20,14 @@ import type { UserType } from "../types/Types";
 function RegisterPage() {
   const navigate = useNavigate();
 
-  const submit = async (values: any, action: any) => {
+  const submit = async (values: {
+    username: string;
+    email: string;
+    password: string;
+    rePassword: string;
+  }) => {
     try {
-      const payload: UserType = {
+      const payload = {
         username: values.username,
         email: values.email,
         password: values.password,
@@ -55,13 +60,13 @@ function RegisterPage() {
     resetForm();
   };
 
-  useEffect(() => {
-    Object.keys(errors).forEach((field) => {
-      if (touched[field as keyof UserType] && errors[field as keyof UserType]) {
-        toast.error(errors[field as keyof UserType]);
-      }
-    });
-  }, [errors, touched]);
+  // useEffect(() => {
+  //   Object.keys(errors).forEach((field) => {
+  //     if (touched[field as keyof UserType] && errors[field as keyof UserType]) {
+  //       toast.error(errors[field as keyof UserType]);
+  //     }
+  //   });
+  // }, [errors, touched]);
 
   return (
     <div className="register-page">

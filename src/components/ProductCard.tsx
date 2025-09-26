@@ -1,4 +1,3 @@
-import React from "react";
 import type { ProductType } from "../types/Types";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";

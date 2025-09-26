@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { setLoading } from "../redux/AppSlice";
@@ -31,7 +31,7 @@ function ProductDetails() {
   const [product, setProduct] = useState<ProductType | null>(null);
   const [count, setCount] = useState<number>(1);
 
-  const [comments, setComments] = useState<CommentType[]>([
+  const [comments] = useState<CommentType[]>([
     {
       id: 1,
       user: "Ahmet",
