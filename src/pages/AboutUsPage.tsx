@@ -1,4 +1,3 @@
-import React from "react";
 import { MacbookScroll } from "@/components/ui/macbook-scroll";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { HoverEffect, aboutUsCards } from "@/components/ui/card-hover-effect";
