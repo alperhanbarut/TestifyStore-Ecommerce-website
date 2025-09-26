@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, createElement } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText as GSAPSplitText } from "gsap/SplitText";
@@ -389,10 +389,8 @@ const Shuffle: React.FC<ShuffleProps> = ({
   const classes = `${baseTw} ${
     ready ? "visible" : "invisible"
   } ${className}`.trim();
-  const Tag = (tag || "p") as keyof JSX.IntrinsicElements;
-
-  return React.createElement(
-    Tag,
+  return createElement(
+    tag || "p",
     { ref: ref as any, className: classes, style: commonStyle },
     text
   );
