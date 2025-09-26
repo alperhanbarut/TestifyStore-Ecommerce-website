@@ -20,7 +20,6 @@ import type { RootState } from "../redux/store";
 import { useSelector } from "react-redux";
 import { productTitles } from "../Translations";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import Shuffle from "./Shuffle";
 
 export interface StaggeredMenuItem {
   label: string;
@@ -514,13 +513,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
                 fontFamily: "inherit",
               }}
             >
-              <Link to="/">
-                <Shuffle
-                  text="TestifyStore"
-                  style={{ fontSize: "1.5rem" }}
-                  duration={1}
-                />
-              </Link>
+              <Link to="/">TestifyStore</Link>
             </span>
           </div>
           <Box

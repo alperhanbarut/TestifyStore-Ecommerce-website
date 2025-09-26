@@ -1,4 +1,3 @@
-import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import type { RootState } from "../redux/store";
 import type { ProductType } from "../types/Types";
