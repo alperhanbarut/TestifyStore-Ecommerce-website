@@ -34,6 +34,14 @@ Hızlı, ölçeklenebilir ve kullanıcı dostu bir alışveriş deneyimi sunmay�
 | **Jest / Testing Library (opsiyonel)** | Birim ve entegrasyon testleri için |
 
 ---
+## 📝 Notlar
+
+- 🛍️ Ürünler FakeStore API üzerinden dinamik olarak çekilmektedir.
+
+- 👤 Kullanıcı bilgileri için JSON Server üzerinde login / register simülasyonu yapılmaktadır.
+
+- 📡 Böylece hem gerçek ürün verileri hem de mock kullanıcı verileri birlikte kullanılmaktadır.
+---
 
 ## 📂 Proje Kurulumu
 
