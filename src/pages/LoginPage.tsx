@@ -43,7 +43,7 @@ function LoginPage() {
     };
   };
 
-  const submit = async (values: any, action: any) => {
+  const submit = async (values: any) => {
     console.log(values);
     try {
       dispatch(setLoading(true));
