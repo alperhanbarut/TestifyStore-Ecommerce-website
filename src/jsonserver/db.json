@@ -1,0 +1,31 @@
+{
+  "users": [
+    {
+      "id": "81b6",
+      "newUser": {
+        "username": "alperhan.barut",
+        "email": "wqer42411@gmail.com",
+        "password": "qwerty",
+        "rePassword": "qwerty"
+      }
+    },
+    {
+      "id": "abef",
+      "newUser": {
+        "username": "wqerten81",
+        "email": "wqer42411@gmail.com",
+        "password": "123456",
+        "rePassword": "123456"
+      }
+    },
+    {
+      "id": "cce4",
+      "newUser": {
+        "username": "emircan",
+        "email": "emircan@gmail.com",
+        "password": "456789",
+        "rePassword": "456789"
+      }
+    }
+  ]
+}
