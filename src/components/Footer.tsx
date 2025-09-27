@@ -44,15 +44,21 @@ function Footer() {
       >
         <Typography
           variant="h6"
+          onClick={() => {
+            navigate("/");
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
           sx={{
             fontWeight: "bold",
             color: "var(--color-primary, #6366f1)",
             letterSpacing: 1,
             mb: { xs: 2, md: 0 },
+            cursor: "pointer",
           }}
         >
           TestifyStore
         </Typography>
+
         <Box
           sx={{
             display: "flex",
