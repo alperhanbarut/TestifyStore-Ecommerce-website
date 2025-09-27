@@ -68,7 +68,10 @@ function Footer() {
               component="button"
               underline="none"
               color="inherit"
-              onClick={() => navigate(item.href)}
+              onClick={() => {
+                navigate(item.href);
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
               sx={{
                 fontWeight: 500,
                 px: 1.2,
