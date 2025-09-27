@@ -2,8 +2,10 @@ import { Box, Typography, Link, IconButton } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import { useNavigate } from "react-router-dom";
 
 function Footer() {
+  const navigate = useNavigate();
   return (
     <Box
       component="footer"
@@ -104,6 +106,7 @@ function Footer() {
             },
           ].map((item) => (
             <IconButton
+              onClick={() => navigate(item.href)}
               key={item.label}
               color="inherit"
               href={item.href}
