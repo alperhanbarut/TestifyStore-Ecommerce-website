@@ -6,6 +6,15 @@ import { useNavigate } from "react-router-dom";
 
 function Footer() {
   const navigate = useNavigate();
+
+  const links = [
+    { label: "Ana Sayfa", href: "/" },
+    { label: "Ürünler", href: "/products" },
+    { label: "Hakkımızda", href: "/about" },
+    { label: "İletişim", href: "/contact" },
+    { label: "Blog", href: "/blog" },
+  ];
+
   return (
     <Box
       component="footer"
@@ -53,17 +62,13 @@ function Footer() {
             justifyContent: { xs: "center", md: "flex-start" },
           }}
         >
-          {[
-            { label: "Ana Sayfa", href: "/" },
-            { label: "Ürünler", href: "/products" },
-            { label: "Hakkımızda", href: "/about" },
-            { label: "İletişim", href: "/contact" },
-          ].map((item) => (
+          {links.map((item) => (
             <Link
               key={item.label}
-              href={item.href}
+              component="button"
               underline="none"
               color="inherit"
+              onClick={() => navigate(item.href)}
               sx={{
                 fontWeight: 500,
                 px: 1.2,
@@ -106,7 +111,6 @@ function Footer() {
             },
           ].map((item) => (
             <IconButton
-              onClick={() => navigate(item.href)}
               key={item.label}
               color="inherit"
               href={item.href}
